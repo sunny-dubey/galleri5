@@ -21,6 +21,10 @@ The trained model has been used to generate the following images:
 - `ranveer_singh_in_lab.jpg`
 - `ranveer_singh_in_mahabharat.jpg`
 - `ranveer_singh_in_office.jpg`
+- `ranveer_singh_fighting.jpg`
+- `ranveer_singh_cooking.jpg`
+- `ranveer_singh_talking_in_parliament`
+
 
 ## Edit Images
 
