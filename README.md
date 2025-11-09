@@ -27,7 +27,9 @@ The trained model has been used to generate the following images:
 The following images were used as input for person replacement:
 - `sunny.jpeg`
 - `rahul.jpeg`
-- `ranbir.jpeg`
+- `ranbir.jpg`
+- `sunny_face.jpeg`
+- `sunny_full.jpeg`
 
 ## Training Process
 
@@ -68,7 +70,7 @@ accelerate launch DiffSynth-Studio/examples/qwen_image/model_training/train.py \
   --output_path "./models/train/ranveer_lora" \
   --lora_base_model "dit" \
   --lora_target_modules "to_q,to_k,to_v,add_q_proj,add_k_proj,add_v_proj,to_out.0,to_add_out,img_mlp.net.2,img_mod.1,txt_mlp.net.2,txt_mod.1" \
-  --lora_rank 32 \
+  --lora_rank 64 \
   --use_gradient_checkpointing \
   --use_gradient_checkpointing_offload \
   --gradient_accumulation_steps 8 \
@@ -76,11 +78,11 @@ accelerate launch DiffSynth-Studio/examples/qwen_image/model_training/train.py \
   --find_unused_parameters \
   --enable_fp8_training \
   --task sft \
-  --save_steps 100
+  --save_steps 2000
 ```
 
 **LoRA Configuration:**
-- **LoRA Rank**: 32
+- **LoRA Rank**: 64
 - **LoRA Base Model**: `dit`
 - **LoRA Target Modules**: `to_q,to_k,to_v,add_q_proj,add_k_proj,add_v_proj,to_out.0,to_add_out,img_mlp.net.2,img_mod.1,txt_mlp.net.2,txt_mod.1`
 - **Learning Rate**: 1e-4
@@ -88,7 +90,7 @@ accelerate launch DiffSynth-Studio/examples/qwen_image/model_training/train.py \
 - **Dataset Repeat**: 15
 - **Max Pixels**: 786,432
 - **Gradient Accumulation Steps**: 8
-- **Save Steps**: 100
+- **Save Steps**: 2000
 - **Optimizations**:
   - Gradient checkpointing enabled
   - Gradient checkpointing offload enabled
