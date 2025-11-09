@@ -20,12 +20,14 @@ The training dataset consists of images of Ranveer Singh with corresponding text
 The trained model has been used to generate the following images:
 - `ranveer_singh_in_lab.jpg`
 - `ranveer_singh_in_mahabharat.jpg`
+- `ranveer_singh_in_office.jpg`
 
 ## Edit Images
 
 The following images were used as input for person replacement:
 - `sunny.jpeg`
 - `rahul.jpeg`
+- `ranbir.jpeg`
 
 ## Training Process
 
